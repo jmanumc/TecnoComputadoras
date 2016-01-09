@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'type', 'avatar'
     ];
 
     /**
@@ -30,5 +30,10 @@ class User extends Authenticatable
     public function articles()
     {
         return $this->hasMany('App\Article');
+    }
+
+    public function setPasswordAttribute ($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
     }
 }
