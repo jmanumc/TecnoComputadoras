@@ -14,7 +14,7 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->default('article-poster-default.jpg');
             $table->integer('article_id')->unsigned();
 
             $table->foreign('article_id')

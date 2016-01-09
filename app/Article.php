@@ -33,7 +33,7 @@ class Article extends Model
      */
     public function tags()
     {
-    	return $this->belongsToMany('App\Tags')->withTimestamps();
+    	return $this->belongsToMany('App\Tag')->withTimestamps();
     }
 
     /*
