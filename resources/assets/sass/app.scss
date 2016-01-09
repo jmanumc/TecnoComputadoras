@@ -1,0 +1,46 @@
+@import "variables-app";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.main {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+// HELPERS
+.fa-btn {
+    margin-right: 6px;
+}
+
+.background-image {
+	background-image: url('https://source.unsplash.com/random');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+// POST
+.post {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ddd;
+	@media screen and (max-width: $screen-phone) {
+		& {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+	}	
+	.thumbnail {
+		padding: 0;
+		border: none;
+	}
+	@media screen and (min-width: $screen-desktop) {
+		.thumbnail {
+			margin-right: -15px;
+		}
+	}
+	.post-heading {
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+	}
+}
