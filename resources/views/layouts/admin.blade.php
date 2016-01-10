@@ -16,6 +16,7 @@
 
 	<!-- Custom styles for this template -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sweetalert.css') }}">
 	<link href="{{ elixir('css/dashboard.css') }}" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -56,6 +57,7 @@
 	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="{{ asset('assets/js/ie10-viewport-bug-workaround.js') }}"></script>
+	<script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
 	<script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
 </html>

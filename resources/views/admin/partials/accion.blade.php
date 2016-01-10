@@ -11,7 +11,6 @@
 	{!! Form::button('<i class="fa fa-trash-o"></i>', array(
 		'type'    => 'submit',
 		'class'   => 'btn btn-xs btn-danger', 
-		'onclick' => 'return confirm("¿Seguro deseas eliminar?")'
 	)) !!}
 	
 {!! Form::close() !!}
