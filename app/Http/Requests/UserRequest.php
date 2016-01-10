@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests;
+namespace TecnoComputadoras\Http\Requests;
 
-use App\Http\Requests\Request;
+use TecnoComputadoras\Http\Requests\Request;
 
 class UserRequest extends Request
 {

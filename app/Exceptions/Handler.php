@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace TecnoComputadoras\Exceptions;
 
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;

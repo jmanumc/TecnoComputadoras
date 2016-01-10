@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace TecnoComputadoras\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

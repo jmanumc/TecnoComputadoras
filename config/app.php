@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        TecnoComputadoras\Providers\AppServiceProvider::class,
+        TecnoComputadoras\Providers\AuthServiceProvider::class,
+        TecnoComputadoras\Providers\EventServiceProvider::class,
+        TecnoComputadoras\Providers\RouteServiceProvider::class,
 
         /*
          * External Service Providers

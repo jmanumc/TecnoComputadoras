@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace TecnoComputadoras;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,7 +17,7 @@ class Article extends Model
      */
     public function user()
     {
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('TecnoComputadoras\User');
     }
 
     /*
@@ -25,7 +25,7 @@ class Article extends Model
      */
     public function category()
     {
-    	return $this->belongsTo('App\Category');
+    	return $this->belongsTo('TecnoComputadoras\Category');
     }
 
     /*
@@ -33,7 +33,7 @@ class Article extends Model
      */
     public function tags()
     {
-    	return $this->belongsToMany('App\Tag')->withTimestamps();
+    	return $this->belongsToMany('TecnoComputadoras\Tag')->withTimestamps();
     }
 
     /*
@@ -41,6 +41,6 @@ class Article extends Model
      */
     public function images()
     {
-        return $this->hasMany('App\Image');
+        return $this->hasMany('TecnoComputadoras\Image');
     }
 }

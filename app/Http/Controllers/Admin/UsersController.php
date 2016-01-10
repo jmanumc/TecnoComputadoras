@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace TecnoComputadoras\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Requests\UserRequest;
-use App\Http\Requests\UpdateUserRequest;
-use App\Http\Controllers\Controller;
+use TecnoComputadoras\Http\Requests;
+use TecnoComputadoras\Http\Requests\UserRequest;
+use TecnoComputadoras\Http\Requests\UpdateUserRequest;
+use TecnoComputadoras\Http\Controllers\Controller;
 
-use App\User;
+use TecnoComputadoras\User;
 
 use Storage;
 use Laracasts\Flash\Flash;
