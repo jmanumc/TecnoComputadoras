@@ -32,6 +32,16 @@ class User extends Authenticatable
         return $this->hasMany('TecnoComputadoras\Article');
     }
 
+    public function setNameAttribute ($value)
+    {
+        $this->attributes['name'] = ucwords($value);
+    }
+
+    public function setEmailAttribute ($value)
+    {
+        $this->attributes['email'] = strtolower($value);
+    }
+
     public function setPasswordAttribute ($value)
     {
         $this->attributes['password'] = bcrypt($value);
