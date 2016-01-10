@@ -161,6 +161,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Watson\Active\ActiveServiceProvider::class,
 
     ],
 
@@ -214,6 +215,7 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Active'    => Watson\Active\Facades\Active::class,
     ],
 
 ];
