@@ -1,4 +1,5 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "master";
 
 // Base Strocture
 // Move down content because we have a fixed navbar that is 50px tall
@@ -13,17 +14,6 @@ body {
 .sub-header {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #eee;
-}
-
-.inline-block {
-	float: none;
-	display: inline-block;
-	margin-right: -4px;
-	vertical-align: top;
-}
-
-.fa-btn {
-    margin-right: 6px;
 }
 
 // Top navigation

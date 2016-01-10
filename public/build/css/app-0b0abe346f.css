@@ -5749,12 +5749,18 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.main {
-  margin-top: 20px;
-  margin-bottom: 20px; }
+.inline-block {
+  float: none;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top; }
 
 .fa-btn {
   margin-right: 6px; }
+
+.main {
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 .background-image {
   background-image: url("https://source.unsplash.com/random");

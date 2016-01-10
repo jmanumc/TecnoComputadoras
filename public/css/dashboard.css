@@ -5749,6 +5749,15 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.inline-block {
+  float: none;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top; }
+
+.fa-btn {
+  margin-right: 6px; }
+
 html, body {
   overflow-x: hidden; }
 
@@ -5758,15 +5767,6 @@ body {
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee; }
-
-.inline-block {
-  float: none;
-  display: inline-block;
-  margin-right: -4px;
-  vertical-align: top; }
-
-.fa-btn {
-  margin-right: 6px; }
 
 .navbar-fixed-top {
   border: 0; }

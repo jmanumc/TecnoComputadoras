@@ -1,5 +1,6 @@
 @import "variables-app";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "master";
 
 .main {
 	margin-top: 20px;
@@ -7,10 +8,6 @@
 }
 
 // HELPERS
-.fa-btn {
-    margin-right: 6px;
-}
-
 .background-image {
 	background-image: url('https://source.unsplash.com/random');
 	background-size: cover;
