@@ -16,12 +16,27 @@ use Laracasts\Flash\Flash;
 
 class UsersController extends Controller
 {
+    protected $avatar = [
+        'default' => 'user-avatar-default.png',
+        'path'    => 'avatars/',
+        'prefix'  => 'avatar_',
+        'url'     => 'images/avatars'
+    ];
+
 	public function index()
 	{
         $users = User::orderBy('id', 'DESC')->paginate(10);
 
 		return view('admin.users.index')->with('users', $users);
 	}
+
+    public function show ($id)
+    {
+        $user = User::findOrFail($id);
+        $user->avatar = $this->getAvatar($user->avatar);
+
+        return \Response::json(array('success' => true, 'user' => $user));
+    }
 
     public function create ()
     {
@@ -32,7 +47,7 @@ class UsersController extends Controller
     {
     	$user = new User($request->all());
     	if(!empty($user->avatar)) {
-	    	$user->avatar = $this->manipulateImage($user->avatar);
+	    	$user->avatar = $this->putAvatar($user->avatar);
     	}
     	$user->save();
 
@@ -75,11 +90,8 @@ class UsersController extends Controller
         if(!empty($request->file('avatar'))) {
             $avatar_old = $user->avatar;
             print($avatar_old);
-            $user->avatar = $this->manipulateImage($request->file('avatar'));
-
-            if($avatar_old != 'user-avatar-default.png' && Storage::disk('local')->exists('users/avatars/' . $avatar_old)) {
-                Storage::delete('users/avatars/' . $avatar_old);
-            }
+            $user->avatar = $this->putAvatar($request->file('avatar'));
+            $this->deleteAvatar($avatar_old);
             $changes = true;
         }
 
@@ -96,21 +108,33 @@ class UsersController extends Controller
     public function destroy ($id)
     {
         $user = User::findOrFail($id);
-        if($user->avatar != 'user-avatar-default.png' && Storage::disk('local')->exists('users/avatars/' . $user->avatar)) {
-            Storage::delete('users/avatars/' . $user->avatar);
-        }
+        $thi->deleteAvatar($user->avatar);
         $user->delete();
 
         Flash::success('El usuario ' . $user->name . ' ha sido eliminado exitosamente');
         return redirect()->route('admin.users.index');
     }
 
-    public function manipulateImage($image)
+    public function getAvatar ($fileName)
     {
-        $name = 'avatar_' . microtime(true) . '.' . $image->getClientOriginalExtension();
-        $path = 'users/avatars/' . $name;
+        return url($this->avatar['url'], $fileName);
+    }
+
+    public function putAvatar ($image)
+    {
+        $name = $this->avatar['prefix'] . microtime(true) . '.' . $image->getClientOriginalExtension();
+        $path = $this->avatar['path'] . $name;
         Storage::put($path, file_get_contents($image));
 
         return $name;
+    }
+
+    public function deleteAvatar ($fileName)
+    {
+        $path = $this->avatar['path'] . $fileName;
+
+        if($fileName != $this->avatar['default'] && Storage::disk('local')->exists($path)) {
+            Storage::delete($path);
+        }
     }
 }

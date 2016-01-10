@@ -28,6 +28,9 @@
 						<td>{{ $user->email }}</td>
 						<td>{{ $user->type }}</td>
 						<td>
+							<button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#showUserModal" data-whatever="{{ route('admin.users.show', $user->id) }}">
+								<i class="fa fa-eye"></i>
+							</button>
 							@include('admin.partials.accion', ['controller' => 'users', 'data' => $user])
 						</td>
 					</tr>
@@ -38,4 +41,23 @@
 	<center>
 		{!! $users->render() !!}
 	</center>
+
+	{{-- Modal Show User --}}
+	<div class="modal fade" id="showUserModal" tabindex="-1" role="dialog" aria-labelledby="showUserModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="showUserModalLabel">Name</h4>
+				</div>
+				<div class="modal-body text-center">
+					<div class="thumbnail">
+						<img src="#" alt="Name" class="user-avatar">
+					</div>
+					<h3 class="page-header user-email">E-Mail</h3>
+					<p class="lead text-muted text-uppercase user-type">Type</p>
+				</div>
+			</div>
+		</div>
+	</div>
 @endsection

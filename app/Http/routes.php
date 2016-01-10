@@ -15,6 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('images/{folder}/{filename}', function ($folder, $filename)
+{	
+	$path = $folder . '/' . $filename;
+
+	$file = Storage::get($path);
+    $type = Storage::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
