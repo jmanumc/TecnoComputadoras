@@ -3,7 +3,12 @@
 @section('title', 'Usuarios')
 
 @section('content')
-	<h1 class="page-header">Usuarios <small>- {{ $users->total() }} Registros</small></h1>
+	<div class="page-header clearfix">
+		<h1 class="inline-block">Usuarios <small>- {{ $users->total() }} Registros</small></h1>
+		<a href="{{ route('admin.users.create') }}" class="btn btn-primary pull-right">
+			<i class="fa fa-user"></i> Registar Usuario
+		</a>
+	</div>
 	<div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
