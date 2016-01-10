@@ -11,14 +11,19 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Dashboard</a></li>
-				<li><a href="#">Settings</a></li>
-				<li><a href="#">Profile</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="{{ url('/home') }}">Tecno Computadoras</a></li>
+				<!-- Authentication Links -->
+				@if (!Auth::guest())
+				    <li class="dropdown">
+				        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				            {{ Auth::user()->name }} <span class="caret"></span>
+				        </a>
+				        <ul class="dropdown-menu" role="menu">
+				            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar Sesión</a></li>
+				        </ul>
+				    </li>
+				@endif
 			</ul>
-			<form class="navbar-form navbar-right">
-				<input type="text" class="form-control" placeholder="Search...">
-			</form>
 		</div>
 	</div>
 </nav>
