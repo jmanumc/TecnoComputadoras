@@ -93,6 +93,18 @@ class UsersController extends Controller
         }
     }
 
+    public function destroy ($id)
+    {
+        $user = User::findOrFail($id);
+        if($user->avatar != 'user-avatar-default.png' && Storage::disk('local')->exists('users/avatars/' . $user->avatar)) {
+            Storage::delete('users/avatars/' . $user->avatar);
+        }
+        $user->delete();
+
+        Flash::success('El usuario ' . $user->name . ' ha sido eliminado exitosamente');
+        return redirect()->route('admin.users.index');
+    }
+
     public function manipulateImage($image)
     {
         $name = 'avatar_' . microtime(true) . '.' . $image->getClientOriginalExtension();
