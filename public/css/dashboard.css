@@ -5759,6 +5759,12 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee; }
 
+.inline-block {
+  float: none;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top; }
+
 .navbar-fixed-top {
   border: 0; }
 

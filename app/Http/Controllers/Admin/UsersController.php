@@ -11,12 +11,15 @@ use App\Http\Controllers\Controller;
 use App\User;
 
 use Storage;
+use Laracasts\Flash\Flash;
 
 class UsersController extends Controller
 {
 	public function index()
 	{
-		//
+        $users = User::orderBy('id', 'DESC')->paginate(10);
+
+		return view('admin.users.index')->with('users', $users);
 	}
 
     public function create ()
@@ -32,6 +35,7 @@ class UsersController extends Controller
     	}
     	$user->save();
 
+        Flash::success('El usuario ' . $user->name . ' ha sido registrado exitosamente');
     	return redirect()->route('admin.users.index');
     }
 

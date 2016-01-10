@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--no-bin-links' ]
+2 info using npm@3.3.12
+3 info using node@v5.3.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData font-awesome-sass
+20 silly mapToRegistry name font-awesome-sass
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/font-awesome-sass
+24 verbose request uri https://registry.npmjs.org/font-awesome-sass
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 18:30:43
+27 verbose request id 9e09e7e213a903a6
+28 http request GET https://registry.npmjs.org/font-awesome-sass
+29 http 404 https://registry.npmjs.org/font-awesome-sass
+30 verbose headers { 'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=0',
+30 verbose headers   'content-length': '2',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Sun, 10 Jan 2016 00:30:46 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   age: '0',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-sjc3133-SJC',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1452385846.526121,VS0,VE343' }
+31 silly get cb [ 404,
+31 silly get   { 'content-type': 'application/json',
+31 silly get     'cache-control': 'max-age=0',
+31 silly get     'content-length': '2',
+31 silly get     'accept-ranges': 'bytes',
+31 silly get     date: 'Sun, 10 Jan 2016 00:30:46 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     age: '0',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-sjc3133-SJC',
+31 silly get     'x-cache': 'MISS',
+31 silly get     'x-cache-hits': '0',
+31 silly get     'x-timer': 'S1452385846.526121,VS0,VE343' } ]
+32 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/font-awesome-sass
+32 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+32 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+32 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+32 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:198:22)
+32 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+32 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+32 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1082:10)
+32 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+32 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+32 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1009:12)
+32 silly fetchPackageMetaData  error for font-awesome-sass@^4.5.0 { [Error: Registry returned 404 for GET on https://registry.npmjs.org/font-awesome-sass] pkgid: 'font-awesome-sass', statusCode: 404, code: 'E404' }
+33 silly rollbackFailedOptional Starting
+34 silly rollbackFailedOptional Finishing
+35 silly runTopLevelLifecycles Starting
+36 silly runTopLevelLifecycles Finishing
+37 silly install printInstalled
+38 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/font-awesome-sass
+38 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+38 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+38 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+38 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:198:22)
+38 verbose stack     at emitTwo (events.js:87:13)
+38 verbose stack     at Request.emit (events.js:172:7)
+38 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1082:10)
+38 verbose stack     at emitOne (events.js:82:20)
+38 verbose stack     at Request.emit (events.js:169:7)
+38 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1009:12)
+39 verbose statusCode 404
+40 verbose pkgid font-awesome-sass
+41 verbose cwd C:\virtualhost\tecnocomputadoras
+42 error Windows_NT 10.0.10586
+43 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--no-bin-links"
+44 error node v5.3.0
+45 error npm  v3.3.12
+46 error code E404
+47 error 404 Registry returned 404 for GET on https://registry.npmjs.org/font-awesome-sass
+47 error 404
+47 error 404 'font-awesome-sass' is not in the npm registry.
+47 error 404 You should bug the author to publish it (or use the name yourself!)
+47 error 404
+47 error 404 Note that you can also install from a
+47 error 404 tarball, folder, http url, or git url.
+48 verbose exit [ 1, true ]

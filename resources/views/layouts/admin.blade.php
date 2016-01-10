@@ -15,6 +15,7 @@
 	<link href="{{ asset('assets/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href="{{ elixir('css/dashboard.css') }}" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -39,7 +40,8 @@
 					<span></span>
 					<span></span>
 				</div>
-
+				
+				@include('flash::message')
 				@yield('content')
 				
 			</div>

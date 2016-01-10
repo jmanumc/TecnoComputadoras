@@ -3,7 +3,7 @@
 @section('title', 'Crear Usuario')
 
 @section('content')
-	<h1 class="page-header">Crear Usuario</h1>
+	<h1 class="page-header">Registrar Usuario</h1>
 
 	{!! Form::open(array(
 		'url'   => route('admin.users.store'),
