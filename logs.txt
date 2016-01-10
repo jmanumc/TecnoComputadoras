@@ -1,0 +1,101 @@
+commit cb50c2f6f81816e8ec3865bb2009dcd6f2b3bfa0
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 11:37:24 2016 -0600
+
+    Agregada e implementada la hoja de estilos Master
+
+commit 46f736826d4138679e707e1df1e82335e1783fa2
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 23:57:26 2016 -0600
+
+    Agregados Setters para Name y Email, en el Modelo User
+
+commit a73c3299eaa718b4a75fdc41a4ff45ce0eea412d
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 23:32:08 2016 -0600
+
+    Modificada la migracion de Users, para que elimine los avatars de los usuarios cuando se haga un rollback
+
+commit 722fb99460b7e94b5bce1f3001381c78caaf95b0
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 22:57:14 2016 -0600
+
+    Modificado el Navbar de la plantilla Admin
+
+commit 0a040dc4e4bb1bc80c8855f72e0e57230d41f64a
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 22:42:36 2016 -0600
+
+    Cambiado el namespace de la Aplicacion. app:name TecnoComputadoras
+
+commit 9d7cf3a620d4960aa3134788ddc221f4aa300593
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 22:35:43 2016 -0600
+
+    Modificado el sidebar de la plantilla Admin
+
+commit ff7b2f47b01d6372675cb9d9465642ec86041310
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 22:27:30 2016 -0600
+
+    Agregago un buton en admin.users.index, para ir a admin.users.create
+
+commit 5952a28e2eea1e84d4817d881a38296837663138
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 22:12:51 2016 -0600
+
+    Molulo Delete User creado
+
+commit 7b975cc8f1c2fa1afeb146a29325ba58048f94d9
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 21:48:08 2016 -0600
+
+    Modulo Edit de Users creado
+
+commit 380efc9b1764d42e53ac0e9edd91b28b0ab97621
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 19:09:46 2016 -0600
+
+    Modulo Index de Users creado
+
+commit 64cb28794fc9028a11e758bc7f78ee6216ac2fbe
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 17:29:12 2016 -0600
+
+    Integración de Laracasts Flash
+
+commit 6c9fb48de2a44b47ed871718a0328e6fa56872c4
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 17:18:08 2016 -0600
+
+    Creado el modulo Registrar usuario
+
+commit c8bf02f05423793cf3030f168fc7542695332378
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 13:12:32 2016 -0600
+
+    Integración de Laravel Collective
+
+commit 532e1e676cfe72fd52e1ca632bd654b87fffe0d8
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sat Jan 9 12:53:39 2016 -0600
+
+    Corregidos los modelos Article y Image. Creados y configurados los Seeders
+
+commit 636815295757c70a66271c99b79004a166bb5301
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Fri Jan 8 23:44:01 2016 -0600
+
+    Modelos agregados y configurados
+
+commit 565504897bc86ae27f86add3e3ed30fabefcf6d9
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Fri Jan 8 22:29:13 2016 -0600
+
+    Creadas las migraciones
+
+commit 8283edf127ab3b437b1962d71d41001c60a68dfd
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Fri Jan 8 21:35:02 2016 -0600
+
+    Hello World
