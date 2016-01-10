@@ -5765,6 +5765,9 @@ body {
   margin-right: -4px;
   vertical-align: top; }
 
+.fa-btn {
+  margin-right: 6px; }
+
 .navbar-fixed-top {
   border: 0; }
 

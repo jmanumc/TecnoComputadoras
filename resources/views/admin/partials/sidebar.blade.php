@@ -1,18 +1,4 @@
 <ul class="nav nav-sidebar">
-	<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-	<li><a href="#">Reports</a></li>
-	<li><a href="#">Analytics</a></li>
-	<li><a href="#">Export</a></li>
-</ul>
-<ul class="nav nav-sidebar">
-	<li><a href="">Nav item</a></li>
-	<li><a href="">Nav item again</a></li>
-	<li><a href="">One more nav</a></li>
-	<li><a href="">Another nav item</a></li>
-	<li><a href="">More navigation</a></li>
-</ul>
-<ul class="nav nav-sidebar">
-	<li><a href="">Nav item again</a></li>
-	<li><a href="">One more nav</a></li>
-	<li><a href="">Another nav item</a></li>
+	<li><a href="#"><i class="fa fa-home fa-btn"></i>Inicio</a></li>
+	<li class="active"><a href="{{ route('admin.users.index') }}"><i class="fa fa-user fa-btn"></i>Usuarios</a></li>
 </ul>
