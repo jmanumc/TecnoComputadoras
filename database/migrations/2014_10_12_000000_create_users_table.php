@@ -33,6 +33,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
 
-        Storage::deleteDirectory('users/');
+        Storage::deleteDirectory('avatars/');
     }
 }

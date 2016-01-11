@@ -18,6 +18,7 @@ class UsersController extends Controller
 {
     protected $avatar = [
         'default' => 'user-avatar-default.png',
+        'pd'      => 'images/default/',
         'path'    => 'avatars/',
         'prefix'  => 'avatar_',
         'url'     => 'images/avatars'
@@ -117,7 +118,11 @@ class UsersController extends Controller
 
     public function getAvatar ($fileName)
     {
-        return url($this->avatar['url'], $fileName);
+        if($fileName == $this->avatar['default']) {
+            return asset($this->avatar['pd'] . $this->avatar['default']);
+        } else {
+            return url($this->avatar['url'], $fileName);
+        }
     }
 
     public function putAvatar ($image)
