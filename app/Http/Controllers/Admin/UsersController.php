@@ -109,7 +109,7 @@ class UsersController extends Controller
     public function destroy ($id)
     {
         $user = User::findOrFail($id);
-        $thi->deleteAvatar($user->avatar);
+        $this->deleteAvatar($user->avatar);
         $user->delete();
 
         Flash::success('El usuario ' . $user->name . ' ha sido eliminado exitosamente');
