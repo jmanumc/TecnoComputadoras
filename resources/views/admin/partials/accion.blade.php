@@ -1,16 +1,20 @@
-<a href="{{ route('admin.'. $controller .'.edit', $data) }}" class="btn btn-xs btn-warning" title="Editar">
-	<i class="fa fa-edit"></i>
-</a>
+<td class="text-center">
+	<a href="{{ route('admin.'. $controller .'.edit', $data) }}" class="btn btn-xs btn-warning" title="Editar">
+		<i class="fa fa-edit"></i>
+	</a>
+</td>
 
-{!! Form::open(array(
-	'route'  => array('admin.'. $controller .'.destroy', $data), 
-	'method' => 'DELETE',
-	'class'  => 'form-horizontal inline-block form-delete',
-)) !!}
-
-	{!! Form::button('<i class="fa fa-trash-o"></i>', array(
-		'type'    => 'submit',
-		'class'   => 'btn btn-xs btn-danger', 
+<td class="text-center">
+	{!! Form::open(array(
+		'route'  => array('admin.'. $controller .'.destroy', $data), 
+		'method' => 'DELETE',
+		'class'  => 'form-delete',
 	)) !!}
 	
-{!! Form::close() !!}
+		{!! Form::button('<i class="fa fa-trash-o"></i>', array(
+			'type'    => 'submit',
+			'class'   => 'btn btn-xs btn-danger', 
+		)) !!}
+		
+	{!! Form::close() !!}
+</td>

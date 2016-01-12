@@ -33,13 +33,13 @@ body {
 .row-offcanvas-right {
 	right: 0;
 	&.active {
-		right: 50%; /* 6 columns */
+		right: 54%; /* 6 columns */
 		& .sidebar-offcanvas {
 			right: 0;
 		}
 	}
 	& .sidebar-offcanvas {
-		right: -50%; /* 6 columns */
+		right: -54%; /* 6 columns */
 		-webkit-transition: all .25s ease-out;
 		     -o-transition: all .25s ease-out;
 		        transition: all .25s ease-out;
@@ -49,13 +49,13 @@ body {
 .row-offcanvas-left {
 	left: 0;
 	&.active {
-		left: 50%; /* 6 columns */
+		left: 54%; /* 6 columns */
 		& .sidebar-offcanvas {
 			left: 0;
 		}
 	}
 	& .sidebar-offcanvas {
-		left: -50%; /* 6 columns */
+		left: -54%; /* 6 columns */
 		-webkit-transition: all .25s ease-out;
 		     -o-transition: all .25s ease-out;
 		        transition: all .25s ease-out;
@@ -65,19 +65,19 @@ body {
 @media screen and (min-width: $screen-tablet) {
 	.row-offcanvas-right {
 		&.active {
-			right: 25%; /* 3 columns */
+			right: 26%; /* 3 columns */
 		}
 		& .sidebar-offcanvas {
-			right: -25%; /* 3 columns */
+			right: -26%; /* 3 columns */
 		}
 	}
 
 	.row-offcanvas-left {
 		&.active {
-			left: 25%; /* 3 columns */
+			left: 26%; /* 3 columns */
 		}
 		& .sidebar-offcanvas {
-			left: -25%; /* 3 columns */
+			left: -26%; /* 3 columns */
 		}
 	}
 }

@@ -3,21 +3,25 @@
 @section('title', 'Usuarios')
 
 @section('content')
-	<div class="page-header clearfix">
-		<h1 class="inline-block">Usuarios <small>- {{ $users->total() }} Registros</small></h1>
-		<a href="{{ route('admin.users.create') }}" class="btn btn-primary pull-right">
-			<i class="fa fa-user"></i> Registar Usuario
-		</a>
+	<div class="page-header">
+		<h1>Usuarios <span class="label label-info"># {{ $users->total() }}</span class="label label-info"></h1>
+	</div>
+	<div class="row">
+		<div class="col-md-12 form-group text-center">
+			<a href="{{ route('admin.users.create') }}" class="btn btn-primary">
+				<i class="fa fa-user"></i> Registar Usuario
+			</a>
+		</div>
 	</div>
 	<div class="table-responsive">
-		<table class="table table-striped">
+		<table class="table table-striped table-bordered">
 			<thead>
 				<tr>
 					<th>#</th>
 					<th>Nombre</th>
 					<th>Correo Electronico</th>
 					<th>Tipo</th>
-					<th>Acción</th>
+					<th colspan="3" class="text-center">Acción</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -27,20 +31,20 @@
 						<td>{{ $user->name }}</td>
 						<td>{{ $user->email }}</td>
 						<td>{{ $user->type }}</td>
-						<td>
+						<td class="text-center">
 							<button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#showUserModal" data-whatever="{{ route('admin.users.show', $user->id) }}">
 								<i class="fa fa-eye"></i>
 							</button>
-							@include('admin.partials.accion', ['controller' => 'users', 'data' => $user])
 						</td>
+						@include('admin.partials.accion', ['controller' => 'users', 'data' => $user])
 					</tr>
 				@endforeach
 			</tbody>
 		</table>
 	</div>
-	<center>
+	<div class="text-center">
 		{!! $users->render() !!}
-	</center>
+	</div>
 
 	{{-- Modal Show User --}}
 	<div class="modal fade" id="showUserModal" tabindex="-1" role="dialog" aria-labelledby="showUserModalLabel">
