@@ -52,9 +52,10 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('reset/{token?}', 'Auth\PasswordController@showResetForm');
     });
 
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home', 'Blog\HomeController@index');
 });
 
+// Admin
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth']], function () {
     
 	Route::resource('users', 'Admin\UsersController');

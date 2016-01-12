@@ -4,15 +4,15 @@ namespace TecnoComputadoras\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use TecnoComputadoras\Http\Controllers\Controller;
 use TecnoComputadoras\Http\Requests;
 use TecnoComputadoras\Http\Requests\UserRequest;
 use TecnoComputadoras\Http\Requests\UpdateUserRequest;
-use TecnoComputadoras\Http\Controllers\Controller;
 
 use TecnoComputadoras\User;
 
-use Storage;
 use Laracasts\Flash\Flash;
+use Storage;
 
 class UsersController extends Controller
 {
