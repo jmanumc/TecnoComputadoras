@@ -40,7 +40,17 @@ Route::get('images/{folder}/{filename}', function ($folder, $filename)
 */
 
 Route::group(['middleware' => 'web'], function () {
-    Route::auth();
+    // Route::auth();
+
+    // Auth
+    Route::post('login', 'Auth\AuthController@login');
+    Route::get('login', 'Auth\AuthController@showLoginForm');
+    Route::get('logout', 'Auth\AuthController@logout');
+    Route::group(['prefix' => 'password'], function () {
+        Route::post('email', 'Auth\PasswordController@sendResetLinkEmail');
+        Route::post('reset', 'Auth\PasswordController@reset');
+        Route::get('reset/{token?}', 'Auth\PasswordController@showResetForm');
+    });
 
     Route::get('/home', 'HomeController@index');
 });
