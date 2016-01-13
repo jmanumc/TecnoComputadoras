@@ -24,6 +24,11 @@ class UsersController extends Controller
         'url'     => 'images/avatars'
     ];
 
+    public function __construct ()
+    {
+        $this->middleware('auth');
+    }
+
 	public function index()
 	{
         $users = User::orderBy('id', 'DESC')->paginate(10);

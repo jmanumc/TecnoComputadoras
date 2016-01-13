@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="spark-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="{{ url('/') }}">Inicio</a></li>
+                <li class="{{ active('blog.home') }}"><a href="{{ route('blog.home') }}">Inicio</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->

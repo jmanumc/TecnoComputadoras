@@ -15,19 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('images/{folder}/{filename}', function ($folder, $filename)
-{	
-	$path = $folder . '/' . $filename;
-
-	$file = Storage::get($path);
-    $type = Storage::mimeType($path);
-
-    $response = Response::make($file, 200);
-    $response->header("Content-Type", $type);
-
-    return $response;
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -39,25 +26,30 @@ Route::get('images/{folder}/{filename}', function ($folder, $filename)
 |
 */
 
+// Blog & Images
 Route::group(['middleware' => 'web'], function () {
-    // Route::auth();
+    Route::get('/home', 'Blog\HomeController@index')->name('blog.home');
 
-    // Auth
-    Route::post('login', 'Auth\AuthController@login');
-    Route::get('login', 'Auth\AuthController@showLoginForm');
-    Route::get('logout', 'Auth\AuthController@logout');
-    Route::group(['prefix' => 'password'], function () {
-        Route::post('email', 'Auth\PasswordController@sendResetLinkEmail');
-        Route::post('reset', 'Auth\PasswordController@reset');
-        Route::get('reset/{token?}', 'Auth\PasswordController@showResetForm');
-    });
-
-    Route::get('/home', 'Blog\HomeController@index');
+    // Images
+    Route::get('images/{folder}/{filename}', 'ImagesController@index')->name('images');
 });
 
 // Admin
-Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth']], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'web'], function () {
     
 	Route::resource('users', 'Admin\UsersController');
 
+});
+
+// Auth
+Route::group(['middleware' => 'web'], function () {
+    // Route::auth();
+    Route::post('login', 'Auth\AuthController@login')->name('auth.login');
+    Route::get('login', 'Auth\AuthController@showLoginForm')->name('auth.show');
+    Route::get('logout', 'Auth\AuthController@logout')->name('auth.logout');
+    Route::group(['prefix' => 'password'], function () {
+        Route::post('email', 'Auth\PasswordController@sendResetLinkEmail')->name('password.send');
+        Route::post('reset', 'Auth\PasswordController@reset')->name('password.reset');
+        Route::get('reset/{token?}', 'Auth\PasswordController@showResetForm')->name('password.show');
+    });
 });
