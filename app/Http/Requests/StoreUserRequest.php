@@ -4,7 +4,7 @@ namespace TecnoComputadoras\Http\Requests;
 
 use TecnoComputadoras\Http\Requests\Request;
 
-class CategoryRequest extends Request
+class StoreUserRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,12 @@ class CategoryRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required|min:3|max:120|unique:categories'
+            'name'                  => 'min:3|required',
+            'email'                 => 'email|unique:users|required',
+            'password'              => 'same:password_confirmation|min:4|required',
+            'password_confirmation' => 'required',
+            'type'                  => 'in:admin,member|required',
+            'avatar'                => 'image'
         ];
     }
 }

@@ -18,12 +18,21 @@ $(document).ready(function() {
 				confirmButtonText: "Si, eliminar esto!",   
 				cancelButtonText: "No, cancelar!",   
 				closeOnConfirm: false,   
-				closeOnCancel: false 
+				closeOnCancel: false,
+				showLoaderOnConfirm: true
 			}, 
 			function(isConfirm){   
 				if (isConfirm) {     
 					$.post(url, data, function(response) {
-						location.reload();
+						swal({
+							title: "Eliminado!",
+							text:  "El elemento ha sido eliminado.", 
+							type: "success"
+						}, function() {
+							location.reload();
+						});
+					}).error(function(error) {
+						swal("Oops...", "Hubo algunos problemas, intentelo mas tarde. :(", "error");
 					});
 				} else {     
 					swal("Cancelado", "Tu elemento esta seguro :)", "error");   

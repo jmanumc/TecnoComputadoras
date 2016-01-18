@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use TecnoComputadoras\Http\Controllers\Controller;
 use TecnoComputadoras\Http\Requests;
-use TecnoComputadoras\Http\Requests\UserRequest;
+use TecnoComputadoras\Http\Requests\StoreUserRequest;
 use TecnoComputadoras\Http\Requests\UpdateUserRequest;
 
 use TecnoComputadoras\User;
@@ -49,7 +49,7 @@ class UsersController extends Controller
     	return view('admin.users.create');
     }
 
-    public function store(UserRequest $request)
+    public function store(StoreUserRequest $request)
     {
     	$user = new User($request->all());
     	if(!empty($user->avatar)) {
@@ -118,7 +118,6 @@ class UsersController extends Controller
         $user->delete();
 
         Flash::success('El usuario ' . $user->name . ' ha sido eliminado exitosamente');
-        return redirect()->route('admin.users.index');
     }
 
     public function getAvatar ($fileName)

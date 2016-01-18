@@ -5,7 +5,8 @@ namespace TecnoComputadoras\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use TecnoComputadoras\Http\Requests;
-use TecnoComputadoras\Http\Requests\CategoryRequest;
+use TecnoComputadoras\Http\Requests\StoreCategoryRequest;
+use TecnoComputadoras\Http\Requests\UpdateCategoryRequest;
 use TecnoComputadoras\Http\Controllers\Controller;
 
 use TecnoComputadoras\Category;
@@ -31,12 +32,37 @@ class CategoriesController extends Controller
     	return view('admin.categories.create');
     }
 
-    public function store(CategoryRequest $request)
+    public function store (StoreCategoryRequest $request)
     {
     	$category = new Category($request->all());
     	$category->save();
 
     	Flash::success('La categoria ' . $category->name . ' ha sido creada exitosamente');
     	return redirect()->route('admin.categories.index');
+    }
+
+    public function edit ($id)
+    {
+    	$category = Category::findOrFail($id);
+
+    	return view('admin.categories.edit')->with('category', $category);
+    }
+
+    public function update (UpdateCategoryRequest $request, $id)
+    {
+    	$category = Category::findOrFail($id);
+    	$category->fill($request->all());
+    	$category->save();
+
+    	Flash::success('La categoria ' . $category->name . ' ha sido actualizada exitosamente');
+    	return redirect()->route('admin.categories.index');
+    }
+
+    public function destroy ($id)
+    {
+    	$category = Category::findOrFail($id);
+    	$category->delete();
+
+    	Flash::success('La categoria ' . $category->name . ' ha sido eliminada exitosamente');
     }
 }
