@@ -1,3 +1,81 @@
+commit a221220928fc4d603bebd5b4ce44d89873d691dc
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 17 19:40:58 2016 -0600
+
+    Inicializados los modulos para las categorias
+
+commit 46898ddaed1b056b9aa64fd90ce406e4b346873e
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 17 19:11:18 2016 -0600
+
+    Cambido el diseño del blog
+
+commit 5aa7b7e8a1eed4e98b5b86153a5b600f6bcce205
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Tue Jan 12 18:08:33 2016 -0600
+
+    Organizado el archivo de rutas
+
+commit 8e74ffaa07c16b552c15c89638a4c22cbf94c3b0
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Tue Jan 12 17:41:07 2016 -0600
+
+    Modificada la ruta del controlador y la vista de Home
+
+commit 29be6301ec534536fb1d5bd958baaaf18d3673b1
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Tue Jan 12 17:18:21 2016 -0600
+
+    Eliminada la ruta register
+
+commit 16bf819bea5a8a5b38628925b7a5d49fb7323292
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Mon Jan 11 22:02:11 2016 -0600
+
+    Modificada la vista admin.users.index
+
+commit 990d9d380765eb676fb9fee2d6f6f611741c79c9
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 22:09:36 2016 -0600
+
+    Eliminada la carpta Fonts de Font Awesome
+
+commit 41d64dccf5ce6752e9085432c5277ec3c5f32aa3
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 20:05:04 2016 -0600
+
+    Corregido error de sintaxis en admin.users.destroy
+
+commit 18204364462527b0e86a79b001f6dd0422d3bbb4
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 18:18:03 2016 -0600
+
+    Corregido problema con UserTableMigrate y admin.users.show
+
+commit 1d1e55c21e7a1151811787e077c21421c84bf901
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 16:50:34 2016 -0600
+
+    Creado el modulo Show User y Una ruta para ver las imagenes
+
+commit 601d74a263020f8883556ed891f80f76c683537e
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 12:34:56 2016 -0600
+
+    Implementado sweetalert.js
+
+commit 63f3a214d1297254cbe64c1b4da210dce24980f2
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 12:21:23 2016 -0600
+
+    Implementado dwightwatson Active en el proyecto
+
+commit 6a9b881a09626ebb500dee63674c123547062ae1
+Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
+Date:   Sun Jan 10 11:59:41 2016 -0600
+
+    Creado el archivo Logs.txt
+
 commit cb50c2f6f81816e8ec3865bb2009dcd6f2b3bfa0
 Author: Juan Manuel Martínez <j-manuel_mtz23@hotmail.com>
 Date:   Sun Jan 10 11:37:24 2016 -0600

@@ -19,4 +19,9 @@ class Category extends Model
     {
     	return $this->hasMany('TecnoComputadoras\Article');
     }
+
+    public function setNameAttribute ($value)
+    {
+        $this->attributes['name'] = ucwords($value);
+    }
 }
