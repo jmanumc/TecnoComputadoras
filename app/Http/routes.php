@@ -37,7 +37,8 @@ Route::group(['middleware' => 'web'], function () {
 // Admin
 Route::group(['prefix' => 'admin', 'middleware' => 'web'], function () {
     
-	Route::resource('users', 'Admin\UsersController');
+    Route::resource('users', 'Admin\UsersController');
+	Route::resource('categories', 'Admin\CategoriesController');
 
 });
 
