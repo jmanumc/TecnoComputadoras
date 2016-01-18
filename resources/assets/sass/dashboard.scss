@@ -1,5 +1,4 @@
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "master";
+@import "helpers";
 
 // Base Strocture
 // Move down content because we have a fixed navbar that is 50px tall
@@ -7,7 +6,7 @@ html, body {
 	overflow-x: hidden;
 }
 body {
-	padding-top: $navbar-height;
+	padding-top: 50px;
 }
 
 // Global add-ons
@@ -62,7 +61,7 @@ body {
 	}
 }
 
-@media screen and (min-width: $screen-tablet) {
+@media screen and (min-width: 768px) {
 	.row-offcanvas-right {
 		&.active {
 			right: 26%; /* 3 columns */
@@ -82,7 +81,7 @@ body {
 	}
 }
 
-@media screen and (min-width: $screen-desktop) {
+@media screen and (min-width: 992px) {
 	.row-offcanvas-right {
 		& .sidebar-offcanvas {
 			right: 0;
@@ -98,7 +97,7 @@ body {
 
 .sidebar-offcanvas {
 	position: fixed;
-	top: $navbar-height;
+	top: 50px;
 	bottom: 0;
 	z-index: 1000;
 	display: block;

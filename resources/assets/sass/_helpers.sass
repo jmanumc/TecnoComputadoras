@@ -1,0 +1,19 @@
+.inline-block
+	float: none
+	display: inline-block
+	margin-right: -4px
+	vertical-align: top
+
+.fa-btn
+    margin-right: 6px
+
+=bg-image($url)
+	background-color: gray
+	background-image: url($url)
+	background-size: cover
+	background-attachment: fixed
+
+=transition($property, $duration, $function)
+	-webkit-transition: $property $duration, $function
+	-o-transition: $property $duration, $function
+	transition: $property $duration, $function

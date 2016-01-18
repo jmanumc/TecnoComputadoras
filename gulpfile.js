@@ -12,10 +12,23 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+
+    // SASS
+    mix.sass('app.sass');
     mix.sass('dashboard.scss');
 
-    mix.version(['css/app.css',	'css/dashboard.css']);
+    // Scripts
+    mix.scripts(['blog.js', 'master.js'], 'public/js/blog.js')
+       .scripts(['dashboard.js', 'master.js'], 'public/js/dashboard.js');
+
+    mix.version([
+    	// CSS
+    	'css/app.css',
+    	'css/dashboard.css',
+    	// JS
+    	'js/blog.js',
+        'js/dashboard.js',
+    ]);
 
     mix.browserSync({
     	proxy: 'tecnocomputadoras.app'

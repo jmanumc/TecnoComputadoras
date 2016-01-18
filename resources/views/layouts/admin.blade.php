@@ -11,11 +11,14 @@
 
 	<title>@yield('title', 'Panel de Administración - Tecno Computadoras')</title>
 
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<link href="{{ asset('assets/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sweetalert.css') }}">
 	<link href="{{ elixir('css/dashboard.css') }}" rel="stylesheet">
 
@@ -26,38 +29,45 @@
 	<![endif]-->
 </head>
 <body>
-	@include('admin.partials.navbar')
+	<!-- header -->
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			@include('admin.partials.navbar')
+		</nav>
+	</header> <!-- / header -->
 
-	<div class="container-fluid">
+	<!-- content -->
+	<section class="container-fluid">
 		<div class="row row-offcanvas row-offcanvas-left">
-			<div id="sidebar" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas">
 
+			<!-- sidebar -->
+			<aside id="sidebar" class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas">
 				@include('admin.partials.sidebar')
+			</aside> <!-- / .sidebar -->
 
-			</div>
-			<div class="col-md-10 col-md-offset-2 main">
+			<!-- main -->
+			<main class="col-md-10 col-md-offset-2 main">
 				<div class="offcanvas-btn hidden-md hidden-lg" data-toggle="offcanvas">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
-				
 				@include('flash::message')
 				@yield('content')
-				
-			</div>
+			</main> <!-- / main -->
+			
 		</div>
-	</div>
+	</section> <!-- / .content -->
 
-	<!-- Bootstrap core JavaScript
+	<!-- Scripts
 	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="{{ asset('assets/js/vendor/jquery.min.js') }}"><\/script>')</script>
+	<!-- JQuery & Bootstrap JS -->
+	<script src="{{ asset('assets/js/vendor/jquery.min.js') }}"></script>
 	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="{{ asset('assets/js/ie10-viewport-bug-workaround.js') }}"></script>
+	<!-- Custom scripts for this template -->
 	<script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
-	<script src="{{ asset('js/dashboard.js') }}"></script>
+	<script src="{{ elixir('js/dashboard.js') }}"></script>
 </body>
 </html>

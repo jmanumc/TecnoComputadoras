@@ -1,0 +1,30 @@
+.row-offcanvas
+	position: relative
+	+transition(all, 0.25s, ease-out)
+	.sidebar-offcanvas
+		@media (max-width: 991px)
+			position: fixed
+			top: 0
+			bottom: 0
+			z-index: 1000
+			padding: 1rem
+			overflow-x: hidden
+			overflow-y: auto
+			background-color: #f5f5f5
+			+transition(all, 0.25s, ease-out)
+	// Right
+	&.row-offcanvas-right
+		right: 0
+		@media (max-width: 991px)
+			.sidebar-offcanvas
+				right: -((100% / 12) * 4)
+		@media (max-width: 767px)
+			.sidebar-offcanvas
+				right: -((100% / 12) * 8)
+		&.active 
+			.sidebar-offcanvas
+				right: 0
+			@media (max-width: 991px)
+				right: ((100% / 12) * 4)
+			@media (max-width: 767px)
+				right: ((100% / 12) * 8)

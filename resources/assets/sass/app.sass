@@ -1,0 +1,40 @@
+// Import custom Bootstrap variables
+@import blog/bootstrap-variables
+// Import Bootstrap for Sass
+@import node_modules/bootstrap-sass/assets/stylesheets/bootstrap
+@import helpers
+
+html
+	font-size: $font-size-base
+body
+	padding-top: $navbar-height
+
+// HEADER
+header.main
+	overflow: hidden
+	background-color: gray
+	background-size: cover
+	background-attachment: fixed
+	@import blog/header/navbar
+	@import blog/header/jumbotron
+
+// CONTENT
+section.main
+	margin-top: 3rem
+	margin-bottom: 3rem
+	main.main
+		& > .blank
+			@extend .col-md-12
+			background-color: white
+			padding-top: 1rem
+			padding-bottom: 1rem
+			&.with-sidebar
+				@extend .col-md-8
+
+		& > .posts
+			@extend .col-md-8
+			@import blog/content/main/post
+	aside.main
+		& > .wrapper
+			background-color: white
+			padding: 1rem

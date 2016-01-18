@@ -4,7 +4,9 @@
 
 @section('content')
 	<div class="page-header">
-		<h1>Usuarios <span class="label label-info"># {{ $users->total() }}</span class="label label-info"></h1>
+		<h1>
+			Usuarios <span class="label label-info"><i class="fa fa-hashtag"></i>{{ $users->total() }}</span>
+		</h1>
 	</div>
 	<div class="row">
 		<div class="col-md-12 form-group text-center">
