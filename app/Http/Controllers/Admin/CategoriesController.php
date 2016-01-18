@@ -14,6 +14,11 @@ use Laracasts\Flash\Flash;
 
 class CategoriesController extends Controller
 {
+	public function __construct ()
+	{
+		$this->middleware('auth');
+	}
+
 	public function index ()
 	{
 		$categories = Category::orderBy('id', 'DESC')->paginate(10);
