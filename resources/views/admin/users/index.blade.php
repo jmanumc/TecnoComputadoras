@@ -57,9 +57,7 @@
 					<h4 class="modal-title" id="showUserModalLabel">Name</h4>
 				</div>
 				<div class="modal-body text-center">
-					<div class="thumbnail">
-						<img src="#" alt="Name" class="user-avatar">
-					</div>
+					<div class="thumbnail"></div>
 					<h3 class="page-header user-email">E-Mail</h3>
 					<p class="lead text-muted text-uppercase user-type">Type</p>
 				</div>

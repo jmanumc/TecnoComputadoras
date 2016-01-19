@@ -51,7 +51,7 @@ $(document).ready(function() {
 			$.get(recipient, function(response) {
 				if(response.success) {
 				    modal.find('.modal-title').text(response.user.name)
-					modal.find('.modal-body .user-avatar').attr('alt', response.user.name).attr('src', response.user.avatar)
+					modal.find('.modal-body .thumbnail').css("background-image", "url(" + response.user.avatar + ")")
 					modal.find('.modal-body .user-email').text(response.user.email)
 					modal.find('.modal-body .user-type').text(response.user.type)
 				}
@@ -64,7 +64,7 @@ $(document).ready(function() {
 			var modal = $(this)
 			modal.find('.modal-body').removeClass('lead')
 			modal.find('.modal-title').text('Name')
-			modal.find('.modal-body .user-avatar').attr('alt', 'Name').attr('src', '#')
+			modal.find('.modal-body .thumbnail').css("background-image", "")
 			modal.find('.modal-body .user-email').text('E-Mail')
 			modal.find('.modal-body .user-type').text('Type')
 		}

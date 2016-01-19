@@ -185,3 +185,12 @@ body {
 		border-radius: 50%;
 	}
 }
+
+.showUserModal .modal-body .thumbnail {
+	height: 300px;
+	display: block;
+	background-color: gray;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
